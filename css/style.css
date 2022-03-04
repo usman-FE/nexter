@@ -20,7 +20,7 @@ body {
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
-.heading-2, .heading-3, .heading-4 {
+.heading-2, .heading-1, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400; }
 
@@ -32,6 +32,11 @@ body {
     color: #f9f7f6; }
   .heading-2--dark {
     color: #54483a; }
+
+.heading-1 {
+  font-size: 4.5rem;
+  color: #f9f7f6;
+  line-height: 1; }
 
 .heading-3 {
   font-size: 1.6rem;
@@ -81,7 +86,6 @@ body {
 .nav-btn {
   border: none;
   border-radius: 0;
-  cursor: pointer;
   background-color: #fff;
   height: 2px;
   width: 4.5rem;
@@ -98,8 +102,25 @@ body {
     transform: translateY(1.3rem); }
 
 .header {
-  background-color: #54483a;
-  grid-column: full-start / col-end 6; }
+  background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/hero.jpeg);
+  grid-column: full-start / col-end 6;
+  background-size: cover;
+  background-position: center;
+  padding: 8rem;
+  padding-top: 4rem;
+  display: grid;
+  grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-template-columns: max-content;
+  grid-row-gap: 1.5rem;
+  justify-content: center; }
+  .header__btn {
+    justify-self: start;
+    align-self: start; }
+  .header__logo {
+    height: 3rem;
+    justify-self: center; }
+  .header__seenon-logos img {
+    height: 2.5rem; }
 
 .realtors {
   background-color: #101d2c;
